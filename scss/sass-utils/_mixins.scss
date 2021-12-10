@@ -1,0 +1,17 @@
+@mixin u-flex($justify-content: center, $algin-item: center, $direction: row) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $algin-item;
+  flex-direction: $direction;
+}
+
+@mixin u-pseudo-icon($icon) {
+  font-size: inherit;
+  content: "";
+  background-image: $icon;
+  background-size: 1.8rem 2rem;
+  background-repeat: no-repeat;
+  width: 1.8rem;
+  height: 2.3rem;
+  margin-right: 0.5rem;
+}
