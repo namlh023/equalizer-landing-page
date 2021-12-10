@@ -1,4 +1,6 @@
 :root {
+  font-size: 62.5%;
+
   --clr-primary-100: hsl(177, 68%, 64%);
   --clr-primary-200: hsl(12, 94%, 65%);
   --clr-primary-300: hsl(33, 100%, 70%);
@@ -8,5 +10,7 @@
 
   --ff-primary: "IBM Plex Sans", sans-serif;
 
-  --fs-primary: 1rem;
+  --fs-primary: 1.6rem;
+
+  --mr-top-illustration: -100px;
 }

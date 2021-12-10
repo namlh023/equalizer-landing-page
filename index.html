@@ -11,50 +11,84 @@
       href="./assets/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="./css/main.css" />
+
     <title>Frontend Mentor | Equalizer landing page</title>
   </head>
   <body>
-    <header>
+    <header class="main-header container">
       <img class="logo" src="./assets/logo.svg" alt="site logo" />
     </header>
-    <main>
-      <section class="intro">
-        <h1 class="title">We make your music sound extraordinary.</h1>
-        <p class="subtitle">
+    <main class="page">
+      <section class="intro container">
+        <h1 class="intro__title">We make your music sound extraordinary.</h1>
+        <p class="intro__subtitle">
           A system audio equalizer specifically designed for Android and iOS.
           Freely tune the way your music sounds with a professional grade
           parametric EQ & volume mixer. Control bass, mids, treble, gain
           control, reverb, and more!
         </p>
       </section>
-      <section class="illustration-app">
-        <img src="./assets/illustration-app.png" alt="illustration-app" />
-      </section>
-      <section class="subscription">
-        <h2>Premium EQ</h2>
-        <p>
-          Get expert-level control with a robust equalizer, volume mixer, and
-          spatial audio. Take your listening experience to a whole new level and
-          access all our incredible features!
-        </p>
-        <p><span>$4 </span>/ month</p>
-        <button>iOS Download</button>
-        <button>Android Download</button>
-      </section>
+      <ul class="subscription">
+        <li class="subscription__item subscription__item--center">
+          <img
+            class="subscription__illustration-app"
+            src="./assets/illustration-app.png"
+            alt="illustration-app"
+          />
+        </li>
+        <li class="subscription__item">
+          <div class="subscription__subscription">
+            <h2 class="subscription__title">Premium EQ</h2>
+            <p class="subscription__subtitle">
+              Get expert-level control with a robust equalizer, volume mixer,
+              and spatial audio. Take your listening experience to a whole new
+              level and access all our incredible features!
+            </p>
+            <p class="subscription__price">
+              <span class="subscription__price--big">$4 </span>/ month
+            </p>
+            <button class="subscription__button subscription__button--dark">
+              iOS Download
+            </button>
+            <button class="subscription__button subscription__button--light">
+              Android Download
+            </button>
+          </div>
+        </li>
+      </ul>
     </main>
-    <footer>
-      <img class="logo" src="./assets/logo.svg" alt="site logo" />
-      <div class="content">
-        <p>
+    <footer class="main-footer container">
+      <div class="main-footer__content">
+        <img class="logo" src="./assets/logo.svg" alt="site logo" />
+        <p class="main-footer__info">
           All rights reserved © Equalizer 2021 Have any problems? Contact us via
           social media or email us at
+          <span class="main-footer__email">equalizer@example.com</span>
         </p>
-        <span>equalizer@example.com</span>
       </div>
-      <ul class="social-links">
-        <li><img src="./assets/icon-facebook.svg" alt="facebook" /></li>
-        <li><img src="./assets/icon-instagram.svg" alt="instagram" /></li>
-        <li><img src="./assets/icon-twitter.svg" alt="twitter" /></li>
+      <ul class="main-footer__social-links">
+        <li class="main-footer__social-link">
+          <img
+            class="main-footer__social-icon"
+            src="./assets/icon-facebook.svg"
+            alt="facebook"
+          />
+        </li>
+        <li class="main-footer__social-link">
+          <img
+            class="main-footer__social-icon"
+            src="./assets/icon-instagram.svg"
+            alt="instagram"
+          />
+        </li>
+        <li class="main-footer__social-link">
+          <img
+            class="main-footer__social-icon"
+            src="./assets/icon-twitter.svg"
+            alt="twitter"
+          />
+        </li>
       </ul>
     </footer>
   </body>
