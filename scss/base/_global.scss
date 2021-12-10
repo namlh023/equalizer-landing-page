@@ -8,9 +8,14 @@
   Layout
 ============*/
 
+// .container {
+//   padding-left: 2.4rem;
+//   padding-right: 2.4rem;
+// }
+
 .container {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
 }
 
 .main-footer {
@@ -24,12 +29,32 @@
 
   &__social-links {
     @include mixins.u-flex($justify-content: flex-start);
-    gap: 1em;
+    gap: 1.6rem;
   }
 
   &__social-icon {
     width: 1.25em;
     height: 1.25em;
+  }
+
+  &__email {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 48em) {
+  .container {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .main-footer {
+    @include mixins.u-flex(
+      $direction: row,
+      $algin-item: center,
+      $justify-content: space-between
+    );
+    gap: 0;
   }
 }
 
@@ -52,7 +77,7 @@
 
   border-radius: 1.2rem;
   margin-bottom: 4em;
-  margin-top: calc(4em - var(--mr-top-illustration));
+  margin-top: calc(4em - var(--mr-subscription));
 
   &__item {
     &--center {
@@ -76,12 +101,12 @@
   }
 
   &__illustration-app {
-    width: 55%;
+    max-width: 22rem;
     height: auto;
     display: inline-block;
     text-align: center;
 
-    margin-top: var(--mr-top-illustration);
+    margin-top: var(--mr-subscription);
   }
 
   &__title {
@@ -138,6 +163,47 @@
       &:before {
         @include mixins.u-pseudo-icon(url("/assets/icon-android.svg"));
       }
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .intro {
+    &__title {
+      max-width: 12ch;
+    }
+
+    &__subtitle {
+      max-width: 48ch;
+    }
+  }
+
+  .subscription {
+    position: relative;
+    min-height: 600px;
+
+    margin-bottom: calc(5.5em + var(--pos-subscription-2));
+    margin-top: calc(5.5em + var(--pos-subscription-2));
+
+    background-size: auto;
+    background-position: center top -100px;
+
+    &__subscription {
+      max-width: 40rem;
+      padding: 3em 3em;
+
+      position: absolute;
+      bottom: calc(var(--pos-subscription-2) * -1);
+      right: var(--pos-subscription-1);
+    }
+
+    &__illustration-app {
+      max-width: 27rem;
+
+      position: absolute;
+      margin-top: unset;
+      top: calc(var(--pos-subscription-2) * -1);
+      left: var(--pos-subscription-1);
     }
   }
 }
