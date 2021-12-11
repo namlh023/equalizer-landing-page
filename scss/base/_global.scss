@@ -8,11 +8,6 @@
   Layout
 ============*/
 
-// .container {
-//   padding-left: 2.4rem;
-//   padding-right: 2.4rem;
-// }
-
 .container {
   margin-left: 2.4rem;
   margin-right: 2.4rem;
@@ -35,6 +30,15 @@
   &__social-icon {
     width: 1.25em;
     height: 1.25em;
+
+    &:hover {
+      filter: invert(53%) sepia(90%) saturate(1101%) hue-rotate(326deg)
+        brightness(100%) contrast(97%);
+    }
+  }
+
+  &__info {
+    max-width: 40ch;
   }
 
   &__email {
@@ -58,9 +62,32 @@
   }
 }
 
+@media (min-width: 90em) {
+  .container {
+    margin-left: 16.5rem;
+    margin-right: 16.5rem;
+  }
+
+  .main-footer {
+    &__content {
+      @include mixins.u-flex(
+        $direction: row,
+        $algin-item: flex-start,
+        $justify-content: space-between
+      );
+      gap: 15em;
+    }
+  }
+}
+
 /*===========
   Component
 ============*/
+
+.logo {
+  width: 14.6rem;
+  height: 3.2rem;
+}
 
 .intro {
   &__title {
@@ -71,7 +98,7 @@
 .subscription {
   background-image: url("/assets/bg-pattern-2.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 28.42rem 42rem;
   background-position: center top;
   background-color: var(--clr-neutral-200);
 
@@ -140,6 +167,8 @@
   &__button {
     @include mixins.u-flex;
 
+    cursor: pointer;
+
     font-size: 1.8rem;
     line-height: 3.2rem;
     font-weight: bold;
@@ -154,6 +183,10 @@
       &:before {
         @include mixins.u-pseudo-icon(url("/assets/icon-apple.svg"));
       }
+
+      &:hover {
+        background-color: var(--clr-primary-100);
+      }
     }
 
     &--light {
@@ -162,6 +195,10 @@
 
       &:before {
         @include mixins.u-pseudo-icon(url("/assets/icon-android.svg"));
+      }
+
+      &:hover {
+        background-color: var(--clr-primary-300);
       }
     }
   }
@@ -180,13 +217,12 @@
 
   .subscription {
     position: relative;
-    min-height: 600px;
+    min-height: 60rem;
 
     margin-bottom: calc(5.5em + var(--pos-subscription-2));
     margin-top: calc(5.5em + var(--pos-subscription-2));
 
-    background-size: auto;
-    background-position: center top -100px;
+    background-position: center top -50px;
 
     &__subscription {
       max-width: 40rem;
@@ -204,6 +240,31 @@
       margin-top: unset;
       top: calc(var(--pos-subscription-2) * -1);
       left: var(--pos-subscription-1);
+    }
+  }
+}
+
+@media (min-width: 90em) {
+  .intro {
+    &__title {
+      max-width: 20ch;
+    }
+
+    &__subtitle {
+      max-width: 70ch;
+    }
+  }
+
+  .subscription {
+    background-size: 31.2rem 46.8rem;
+
+    &__subscription {
+      max-width: 46rem;
+      padding: 3.375em 3.375em;
+    }
+
+    &__illustration-app {
+      max-width: 31.2rem;
     }
   }
 }
