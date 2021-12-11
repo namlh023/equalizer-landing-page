@@ -1,0 +1,270 @@
+@use "../sass-utils/mixins";
+@use "./reset";
+@use "./root";
+@use "./font";
+@use "./general";
+
+/*===========
+  Layout
+============*/
+
+.container {
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+}
+
+.main-footer {
+  @include mixins.u-flex($direction: column, $algin-item: flex-start);
+  gap: 6.4rem;
+
+  &__content {
+    @include mixins.u-flex($direction: column, $algin-item: flex-start);
+    gap: 3.2rem;
+  }
+
+  &__social-links {
+    @include mixins.u-flex($justify-content: flex-start);
+    gap: 1.6rem;
+  }
+
+  &__social-icon {
+    width: 1.25em;
+    height: 1.25em;
+
+    &:hover {
+      filter: invert(53%) sepia(90%) saturate(1101%) hue-rotate(326deg)
+        brightness(100%) contrast(97%);
+    }
+  }
+
+  &__info {
+    max-width: 40ch;
+  }
+
+  &__email {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 48em) {
+  .container {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .main-footer {
+    @include mixins.u-flex(
+      $direction: row,
+      $algin-item: center,
+      $justify-content: space-between
+    );
+    gap: 0;
+  }
+}
+
+@media (min-width: 90em) {
+  .container {
+    margin-left: 16.5rem;
+    margin-right: 16.5rem;
+  }
+
+  .main-footer {
+    &__content {
+      @include mixins.u-flex(
+        $direction: row,
+        $algin-item: flex-start,
+        $justify-content: space-between
+      );
+      gap: 15em;
+    }
+  }
+}
+
+/*===========
+  Component
+============*/
+
+.logo {
+  width: 14.6rem;
+  height: 3.2rem;
+}
+
+.intro {
+  &__title {
+    padding-bottom: 0.5em;
+  }
+}
+
+.subscription {
+  background-image: url("/assets/bg-pattern-2.svg");
+  background-repeat: no-repeat;
+  background-size: 28.42rem 42rem;
+  background-position: center top;
+  background-color: var(--clr-neutral-200);
+
+  border-radius: 1.2rem;
+  margin-bottom: 4em;
+  margin-top: calc(4em - var(--mr-subscription));
+
+  &__item {
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__subscription {
+    background-color: var(--clr-primary-200);
+    border-radius: 1.2rem;
+    padding: 3em 2.3125em;
+    margin-top: 4.8rem;
+
+    h2 {
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: var(--clr-neutral-100);
+    }
+  }
+
+  &__illustration-app {
+    max-width: 22rem;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+
+    margin-top: var(--mr-subscription);
+  }
+
+  &__title {
+    color: var(--clr-neutral-100);
+  }
+
+  &__subtitle {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+
+    margin-bottom: 2.25rem;
+  }
+
+  &__price {
+    @include mixins.u-flex($justify-content: flex-start);
+
+    font-size: 2rem;
+    line-height: 3.2rem;
+
+    margin-bottom: 1.6em;
+
+    &--big {
+      font-weight: bold;
+      font-size: 6.5rem;
+      line-height: 5.2rem;
+
+      margin-right: 1rem;
+    }
+  }
+
+  &__button {
+    @include mixins.u-flex;
+
+    cursor: pointer;
+
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    font-weight: bold;
+    padding: 0.8em 0;
+
+    &--dark {
+      background-color: var(--clr-neutral-200);
+      color: var(--clr-neutral-100);
+
+      margin-bottom: 0.9em;
+
+      &:before {
+        @include mixins.u-pseudo-icon(url("/assets/icon-apple.svg"));
+      }
+
+      &:hover {
+        background-color: var(--clr-primary-100);
+      }
+    }
+
+    &--light {
+      background-color: var(--clr-neutral-100);
+      color: var(--clr-neutral-200);
+
+      &:before {
+        @include mixins.u-pseudo-icon(url("/assets/icon-android.svg"));
+      }
+
+      &:hover {
+        background-color: var(--clr-primary-300);
+      }
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .intro {
+    &__title {
+      max-width: 12ch;
+    }
+
+    &__subtitle {
+      max-width: 48ch;
+    }
+  }
+
+  .subscription {
+    position: relative;
+    min-height: 60rem;
+
+    margin-bottom: calc(5.5em + var(--pos-subscription-2));
+    margin-top: calc(5.5em + var(--pos-subscription-2));
+
+    background-position: center top -50px;
+
+    &__subscription {
+      max-width: 40rem;
+      padding: 3em 3em;
+
+      position: absolute;
+      bottom: calc(var(--pos-subscription-2) * -1);
+      right: var(--pos-subscription-1);
+    }
+
+    &__illustration-app {
+      max-width: 27rem;
+
+      position: absolute;
+      margin-top: unset;
+      top: calc(var(--pos-subscription-2) * -1);
+      left: var(--pos-subscription-1);
+    }
+  }
+}
+
+@media (min-width: 90em) {
+  .intro {
+    &__title {
+      max-width: 20ch;
+    }
+
+    &__subtitle {
+      max-width: 70ch;
+    }
+  }
+
+  .subscription {
+    background-size: 31.2rem 46.8rem;
+
+    &__subscription {
+      max-width: 46rem;
+      padding: 3.375em 3.375em;
+    }
+
+    &__illustration-app {
+      max-width: 31.2rem;
+    }
+  }
+}

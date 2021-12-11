@@ -1,0 +1,88 @@
+body {
+  background-color: var(--clr-neutral-100);
+  background-image: url("../../assets/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 58.2rem 78rem;
+  background-position: right -220px top -240px;
+
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+  color: var(--clr-neutral-200);
+}
+
+header {
+  padding-top: 4rem;
+  padding-bottom: 6.4rem;
+}
+
+footer {
+  margin-bottom: 8rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: -0.454545px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+p {
+  line-height: 2.6rem;
+}
+
+button {
+  border-radius: 1.2rem;
+  width: 100%;
+  border: none;
+}
+
+@media (min-width: 48em) {
+  body {
+    background-image: url("../../assets/bg-main-tablet.png"),
+      url("../../assets/bg-pattern-1.svg");
+    background-size: 128.3rem 110.8rem, 26.7rem 40rem;
+    background-position: left -300px top -300px, right -50px top -80px;
+  }
+
+  header {
+    padding-top: 6.2rem;
+    padding-bottom: 9.5rem;
+  }
+
+  h1 {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+    letter-spacing: -0.727273px;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
+
+@media (min-width: 90em) {
+  body {
+    background-image: url("../../assets/bg-main-desktop.png"),
+      url("../../assets/bg-pattern-1.svg");
+    background-size: 191.3rem 205.8rem, 31.2rem 46.8rem;
+    background-position: left -300px top -300px, right top;
+  }
+
+  h1 {
+    font-size: 8.8rem;
+    line-height: 8.8rem;
+    letter-spacing: -1px;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 3.4rem;
+  }
+}
