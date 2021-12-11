@@ -96,7 +96,7 @@
 }
 
 .subscription {
-  background-image: url("/assets/bg-pattern-2.svg");
+  background-image: url("../assets/bg-pattern-2.svg");
   background-repeat: no-repeat;
   background-size: 28.42rem 42rem;
   background-position: center top;
@@ -181,7 +181,7 @@
       margin-bottom: 0.9em;
 
       &:before {
-        @include mixins.u-pseudo-icon(url("/assets/icon-apple.svg"));
+        @include mixins.u-pseudo-icon(url("../assets/icon-apple.svg"));
       }
 
       &:hover {
@@ -194,7 +194,7 @@
       color: var(--clr-neutral-200);
 
       &:before {
-        @include mixins.u-pseudo-icon(url("/assets/icon-android.svg"));
+        @include mixins.u-pseudo-icon(url("../assets/icon-android.svg"));
       }
 
       &:hover {
