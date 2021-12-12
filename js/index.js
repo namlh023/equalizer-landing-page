@@ -9,3 +9,5 @@ function addOrRemoveContainer() {
 }
 
 window.addEventListener("resize", addOrRemoveContainer);
+
+window.addEventListener("DOMContentLoaded", addOrRemoveContainer);

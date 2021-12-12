@@ -17,7 +17,9 @@
   </head>
   <body>
     <header class="main-header container">
-      <img class="logo" src="./assets/logo.svg" alt="site logo" />
+      <a href="#" class="button-logo"
+        ><img class="logo" src="./assets/logo.svg" alt="Equalizer"
+      /></a>
     </header>
     <main class="page">
       <section class="intro container">
@@ -34,7 +36,8 @@
           <img
             class="subscription__illustration-app"
             src="./assets/illustration-app.png"
-            alt="illustration-app"
+            alt=""
+            aria-hidden="true"
           />
         </li>
         <li class="subscription__item">
@@ -48,19 +51,24 @@
             <p class="subscription__price">
               <span class="subscription__price--big">$4 </span>/ month
             </p>
-            <button class="subscription__button subscription__button--dark">
+            <a href="#" class="subscription__button subscription__button--dark">
               iOS Download
-            </button>
-            <button class="subscription__button subscription__button--light">
+            </a>
+            <a
+              href="#"
+              class="subscription__button subscription__button--light"
+            >
               Android Download
-            </button>
+            </a>
           </div>
         </li>
       </ul>
     </main>
     <footer class="main-footer container">
       <div class="main-footer__content">
-        <img class="logo" src="./assets/logo.svg" alt="site logo" />
+        <a href="#" class="button-logo"
+          ><img class="logo" src="./assets/logo.svg" alt="Equalizer"
+        /></a>
         <p class="main-footer__info">
           All rights reserved © Equalizer 2021 <br />
           Have any problems? Contact us via social media or email us at
@@ -69,29 +77,32 @@
       </div>
       <ul class="main-footer__social-links">
         <li class="main-footer__social-link">
-          <a href="#">
+          <a href="#" aria-label="Visit our facebook page">
             <img
               class="main-footer__social-icon"
               src="./assets/icon-facebook.svg"
-              alt="facebook"
+              alt=""
+              aria-hidden="true"
             />
           </a>
         </li>
         <li class="main-footer__social-link">
-          <a href="#">
+          <a href="#" aria-label="Visit our instagram page">
             <img
               class="main-footer__social-icon"
               src="./assets/icon-instagram.svg"
-              alt="instagram"
+              alt=""
+              aria-hidden="true"
             />
           </a>
         </li>
         <li class="main-footer__social-link">
-          <a href="#">
+          <a href="#" aria-label="Visit our twitter page">
             <img
               class="main-footer__social-icon"
               src="./assets/icon-twitter.svg"
-              alt="twitter"
+              alt=""
+              aria-hidden="true"
             />
           </a>
         </li>
