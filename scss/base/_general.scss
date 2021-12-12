@@ -36,10 +36,11 @@ p {
   line-height: 2.6rem;
 }
 
-button {
+a {
   border-radius: 1.2rem;
   width: 100%;
   border: none;
+  text-decoration: none;
 }
 
 @media (min-width: 48em) {
